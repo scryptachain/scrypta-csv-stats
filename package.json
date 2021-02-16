@@ -1,0 +1,23 @@
+{
+  "name": "@scrypta/export-csv",
+  "version": "0.0.1",
+  "description": "Scrypta export csv tool.",
+  "private": false,
+  "main": "index.js",
+  "author": "turinglabsorg",
+  "license": "MIT",
+  "dependencies": {
+    "@scrypta/core": "^3.0.6",
+    "axios": "^0.21.1",
+    "csv-file-creator": "^1.0.9",
+    "express": "^4.17.1",
+    "minimist": "^1.2.5"
+  },
+  "devDependencies": {
+    "conditional-type-checks": "^1.0.5",
+    "dtslint": "^4.0.7",
+    "mocha": "^8.3.0",
+    "typescript": "^4.1.5"
+  },
+  "_id": "@scrypta/export-csv@0.0.1"
+}
