@@ -14,10 +14,19 @@ if (argv.a) {
         for (let k in res.data) {
             let tx = res.data[k]
             progress += tx.value
+            let type = tx.type
+            if (type === "TX") {
+                if (tx.value > 0) {
+                    type = "RECEIVE"
+                } else {
+                    type = "SEND"
+                }
+            }
             data.push([
                 tx.txid,
                 tx.blockheight,
-                new Date(tx.time),
+                new Date(tx.time * 1000),
+                type,
                 tx.value,
                 progress
             ])
