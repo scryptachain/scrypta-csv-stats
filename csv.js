@@ -25,7 +25,9 @@ if (argv.a) {
             data.push([
                 tx.txid,
                 tx.blockheight,
-                new Date(tx.time * 1000),
+                new Date(tx.time * 1000).toISOString().
+                replace(/T/, ' ').
+                replace(/\..+/, ''),
                 type,
                 tx.value,
                 progress
